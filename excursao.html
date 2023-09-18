@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,200;1,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/records.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <script src="scripts/excursao.js" defer></script>
+    <title>COT</title>
+</head>
+
+<body>
+    <header> 
+        <div id="logo-content">
+            <img src="assets/LogoCot.png" alt="" srcset="">
+        </div>  
+        <h1> CADASTRO DE EXCURSÃO</h1>   
+    </header>
+    <div class="menu" id="menu">
+        <a href="#">Página Inicial</a>
+        <a href="index.html">Formandos</a>
+        <a href="javascript:void(0);" class="close-btn" onclick="closeMenu()">&times;</a>
+    </div>
+    
+    <button id="menuBtn" onclick="openMenu()">Menu</button>
+    
+    <script>
+    function openMenu() {
+        document.getElementById("menu").style.width = "250px";
+    }
+    
+    function closeMenu() {
+        document.getElementById("menu").style.width = "0";
+    }
+    </script>
+    <main>
+        <button type="button" class="button blue mobile" id="cadastrarCliente">Novo Cadastro</button>
+        <table id="tableClient" class="records">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Observação</th>
+                    <th>Pago</th>
+                    <th>Turma</th>
+                    <th>Professor</th>
+                    <th>Condutor</th>
+                    <th>Excursão</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h2>Novo Cadastro</h2>
+                    <span class="modal-close" id="modalClose">&#10006;</span>
+                </header>
+                <form id="form" class="modal-form">
+                    <input type="text" id="nome" data-index="new" class="modal-field" placeholder="Nome"
+                        required>
+                    <input type="text" id="email" class="modal-field" placeholder="Observações" required>
+                    <input type="text" id="celular" class="modal-field" placeholder="Data de pagamento" required>
+                    <input type="text" id="cidade" class="modal-field" placeholder="Turma" required>
+                    <input type="text" id="professor" class="modal-field" placeholder="Professor" required>
+                    <input type="text" id="condutor" class="modal-field" placeholder="Condutor" required>
+                    <input type="text" id="excursao" class="modal-field" placeholder="Qual Excursão?" required>
+                </form>
+                <footer class="modal-footer">
+                    <button id="salvar" class="button green">Salvar</button>
+                    <button id="cancelar" class="button blue">Cancelar</button>
+                </footer>
+            </div>
+        </div>
+    </main>
+    <footer>
+        Copyright &copy; 2023 - Euller Pinheiro
+    </footer>
+</body>
+
+</html>
